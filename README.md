@@ -27,10 +27,9 @@ This directive executes at priority level 0.
 
 ### Usage
 as attribute:
-HTML
 ```HTML
 <input
-  ng-datetime-picker="{}">
+  ng-datetime-picker="YOUR_OPTIONS">
 ```
 ### Arguments
 | Param | Type | Details |
