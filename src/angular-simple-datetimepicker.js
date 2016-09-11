@@ -1,15 +1,14 @@
-/*
- * angular-simple-datetimepicker v0.1.0
- * https://github.com/emn178/angular-simple-datetimepicker
+/**
+ * [jQuery-stickit]{@link https://github.com/emn178/angular-simple-datetimepicker}
  *
- * Copyright 2014, emn178@gmail.com
- *
- * Licensed under the MIT license:
- * http://www.opensource.org/licenses/MIT
+ * @version 0.1.1
+ * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @copyright Chen, Yi-Cyuan 2015-2016
+ * @license MIT
  */
-;(function(angular) {
+(function (angular) {
   angular.module('ngDatetimePicker', [])
-  .directive('ngDatetimePicker', ['$parse', function($parse) {
+  .directive('ngDatetimePicker', ['$parse', function ($parse) {
     return {
       restrict: "A",
       scope: {
@@ -17,6 +16,7 @@
         options: '=ngDatetimePicker'
       },
       link: function (scope, element) {
+        scope.options.current = scope.ngModel;
         element.appendDtpicker(scope.options);
       }
     };
